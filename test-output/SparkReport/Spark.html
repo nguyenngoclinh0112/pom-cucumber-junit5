@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 14, 2026 04:30:25 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 14, 2026 03:31:14 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -77,7 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@dashboard</a></li>
+					<li><a href='#'>@login_success</a></li>
+					<li><a href='#'>@SEVERITY=critical</a></li>
+					<li><a href='#'>@epic_OrangeHRM</a></li>
 					<li><a href='#'>@login</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -125,7 +127,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
-                    2</span> features failed, 
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='61%'>
-                    <span class='strong'>8</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='38%'>
-                    5</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,14 +160,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='80%'>
-                    <span class='strong'>46</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8%'>
-                    5</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>
-                    6</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    2</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    2</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -188,315 +190,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Quản lý giao diện trang chủ (Dashboard)</span>
-						<span class='test-time'>Aug 14, 2026 04:30:26 PM</span>
-						<span class='test-status right fail'>Fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-
-<div class='scenario node' test-id='2' status='pass'>
-
-	<span class='duration right label'>00 00 17.236</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Kiểm tra các widget hiển thị đầy đủ trên Dashboard</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@dashboard</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='4' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</div>
-
-
-		</li>
-		<li test-id='5' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</div>
-
-
-		</li>
-		<li test-id='6' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</div>
-
-
-		</li>
-		<li test-id='7' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraWidgetHienThi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Hệ thống hiển thị widget "Time at Work"</div>
-
-
-		</li>
-		<li test-id='8' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraWidgetHienThi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Hệ thống hiển thị widget "My Actions"</div>
-
-
-		</li>
-		<li test-id='9' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraWidgetHienThi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Hệ thống hiển thị widget "Quick Launch"</div>
-
-
-		</li>
-		<li test-id='10' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraWidgetHienThi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Hệ thống hiển thị widget "Buzz Latest Posts"</div>
-
-
-		</li>
-		<li test-id='11' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraWidgetHienThi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Hệ thống hiển thị widget "Employees on Leave Today"</div>
-
-
-		</li>
-		<li test-id='12' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.DashboardStep.kiemTraBieuDoTron(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Hệ thống hiển thị biểu đồ tròn "Employee Distribution by Sub Unit"</div>
-
-
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='14' status='fail'>
-
-	<span class='duration right label'>00 02 48.615</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>ten_icon</td><td>ten_trang_den</td></tr><tr><td>Assign Leave</td><td>Assign Leave</td></tr><tr><td>Leave List</td><td>Leave List</td></tr><tr><td>Timesheets</td><td>Timesheets</td></tr><tr><td>Apply Leave</td><td>Apply Leave</td></tr><tr><td>My Leave</td><td>My Leave</td></tr><tr><td>My Timesheet</td><td>My Timesheet</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='15' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='17' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='18' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='19' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-				</li>
-				<li test-id='20' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Người dùng nhấn vào icon "Assign Leave" trong mục Quick Launch</h6>
-
-				</li>
-				<li test-id='21' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Hệ thống chuyển hướng sang trang "Assign Leave"</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='23' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='25' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='26' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='27' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-				</li>
-				<li test-id='28' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Người dùng nhấn vào icon "Leave List" trong mục Quick Launch</h6>
-
-				</li>
-				<li test-id='29' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Hệ thống chuyển hướng sang trang "Leave List"</h6>
-
-							<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Leave List'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60006}, goog:processID: 1836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60006/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ddff50c8ca56812a4a138183521a6e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Leave List"(classpath:features/dashboard.feature:18)
-</textarea>
-				</li>
-			</ul>
-		</li>
-		<li test-id='31' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='33' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='34' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='35' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-				</li>
-				<li test-id='36' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Người dùng nhấn vào icon "Timesheets" trong mục Quick Launch</h6>
-
-				</li>
-				<li test-id='37' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Hệ thống chuyển hướng sang trang "Timesheets"</h6>
-
-							<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Timesheets'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60047}, goog:processID: 27156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60047/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ed775230e57e0799c1a3ac7d9834bb82
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Timesheets"(classpath:features/dashboard.feature:18)
-</textarea>
-				</li>
-			</ul>
-		</li>
-		<li test-id='39' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='41' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='42' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='43' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-				</li>
-				<li test-id='44' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Người dùng nhấn vào icon "Apply Leave" trong mục Quick Launch</h6>
-
-				</li>
-				<li test-id='45' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Hệ thống chuyển hướng sang trang "Apply Leave"</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='47' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='49' class='gc given Fail' status='Fail'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-							<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='username'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60166}, goog:processID: 31752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60166/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c1d3005187358cd72c4d5889f1bcbf37
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.LoginPage.open(LoginPage.java:22)
-	at stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap(LoginStep.java:33)
-	at ✽.người dùng đang ở trang đăng nhập OranageHRM(classpath:features/dashboard.feature:4)
-</textarea>
-				</li>
-				<li test-id='50' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='51' class='gc then Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='52' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Người dùng nhấn vào icon "My Leave" trong mục Quick Launch</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='53' class='gc then Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Hệ thống chuyển hướng sang trang "My Leave"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='55' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</div>
-
-				<div class='category-list'>
-						<span class='category label'>@dashboard</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='57' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='58' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='59' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</h6>
-
-				</li>
-				<li test-id='60' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.nhanIconQuickLaunch(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Người dùng nhấn vào icon "My Timesheet" trong mục Quick Launch</h6>
-
-				</li>
-				<li test-id='61' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.DashboardStep.kiemTraChuyenTrang(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Hệ thống chuyển hướng sang trang "My Timesheet"</h6>
-
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='63'>
-					<div class='test-heading'>
 						<span class='test-name'>Đăng nhập hệ thống OrangeHRM</span>
-						<span class='test-time'>Aug 14, 2026 04:33:32 PM</span>
+						<span class='test-time'>Sep 14, 2026 03:31:15 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -508,187 +203,155 @@ Session ID: c1d3005187358cd72c4d5889f1bcbf37
 </div>
 	<div class='test-desc'>    Là một người dùng, tôi muốn đăng nhập vào hệ thống để có thể truy cập vào các chức năng quản lý nhân sự</div>
 
-<div class='scenario node' test-id='64' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 10.031</span>
+	<span class='duration right label'>00 01 46.918</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Đăng nhập thành công với tài khoản hợp lệ</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Đăng nhập thành công với tài khoản hợp lệ</div>
 	</div>
 	
 	
 		<div class='category-list'>
+				<span class='category label'>@login_success</span>
 				<span class='category label'>@login</span>
+				<span class='category label'>@epic_OrangeHRM</span>
+				<span class='category label'>@SEVERITY=critical</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='66' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</div>
+		<li test-id='5' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</div>
 
 
-		</li>
-		<li test-id='67' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</div>
-
-
-		</li>
-		<li test-id='68' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then người dùng được chuyển đến trang Dashboard</div>
-
-
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='70' status='pass'>
-
-	<span class='duration right label'>00 00 07.775</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Đăng nhập thất bại với mật khẩu sai</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@login</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='72' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</div>
-
-
-		</li>
-		<li test-id='73' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin1234"</div>
-
-
-		</li>
-		<li test-id='74' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefinitions.LoginStep.he_thong_bao_loi_va_vung_o_trang_dang_nhap())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then hệ thống báo lỗi và vẫn ở trang đăng nhập</div>
-
-
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='76' status='fail'>
-
-	<span class='duration right label'>00 01 31.036</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Đăng nhập với nhiều bộ dữ liệu khác nhau</div>
-	</div>
-	
-		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>username</td><td>password</td><td>expected</td></tr><tr><td>Admin</td><td>admin123</td><td>success</td></tr><tr><td>Admin1</td><td>admin1234</td><td>fail</td></tr><tr><td>Admin</td><td>admin123</td><td>fail</td></tr><tr><td>Admin1</td><td>admin1234</td><td>fail</td></tr></table></div>
-	
-	
-	<ul class='steps'>
-		<li test-id='77' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Đăng nhập với nhiều bộ dữ liệu khác nhau</div>
-
-				<div class='category-list'>
-						<span class='category label'>@login</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='79' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='80' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
-
-				</li>
-				<li test-id='81' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then kết quả đăng nhập phải là "success"</h6>
-
-				</li>
-			</ul>
-		</li>
-		<li test-id='83' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Đăng nhập với nhiều bộ dữ liệu khác nhau</div>
-
-				<div class='category-list'>
-						<span class='category label'>@login</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='85' class='gc given Fail' status='Fail'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-							<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='username'] (tried for 10 second(s) with 500 milliseconds interval)
+					<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='username'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60400}, goog:processID: 29032, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60400/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: df81449477e4e352c3a0edc9af6d3b80
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64976}, goog:processID: 36204, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64976/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2eee49064248cb81420492687aa3c0a
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.LoginPage.open(LoginPage.java:22)
-	at stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap(LoginStep.java:33)
-	at ✽.người dùng đang ở trang đăng nhập OranageHRM(classpath:features/login.feature:7)
+	at pages.LoginPage.open(LoginPage.java:24)
+	at stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap(LoginStep.java:39)
+	at ✽.người dùng đang ở trang đăng nhập OranageHRM(classpath:features/login.feature:8)
 </textarea>
-				</li>
-				<li test-id='86' class='gc when Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When người dùng đăng nhập với tài khoản "Admin1" và mật khẩu "admin1234"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-				<li test-id='87' class='gc then Skip' status='Skip'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then kết quả đăng nhập phải là "fail"</h6>
-
-							<div class="node-step">Step skipped</div>
-				</li>
-			</ul>
 		</li>
-		<li test-id='89' class='node scenario Fail' status='Fail'>
-			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Đăng nhập với nhiều bộ dữ liệu khác nhau</div>
+		<li test-id='7' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When người dùng đăng nhập với tài khoản hợp lệ</div>
 
-				<div class='category-list'>
-						<span class='category label'>@login</span>
-				</div>
 
-			<ul class='gc steps'>
-				<li test-id='91' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='9' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepdefinitions.LoginStep.nguoi_dung_da_chuyen_den_trang_dashboard())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then người dùng được chuyển đến trang Dashboard</div>
 
-				</li>
-				<li test-id='92' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin" và mật khẩu "admin123"</h6>
 
-				</li>
-				<li test-id='93' class='gc then Fail' status='Fail'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then kết quả đăng nhập phải là "fail"</h6>
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='10' class='node * Fail' status='Fail'>
+			<div class="step-name" title="(AFTER)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</div>
 
-							<textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Kết quả không đúnghttps://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index ==> expected: <fail> but was: <success>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-	at stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(LoginStep.java:69)
-	at ✽.kết quả đăng nhập phải là "fail"(classpath:features/login.feature:19)
+
+					<textarea disabled class="code-block">java.lang.RuntimeException: java.io.FileNotFoundException: src\test\resource\data\TestResults.xlsx (The system cannot find the path specified)
+	at utils.ExcelReportUtil.updateStatus(ExcelReportUtil.java:141)
+	at hooks.Hooks.updateExcelReport(Hooks.java:99)
+	at hooks.Hooks.tearDown(Hooks.java:60)
+Caused by: java.io.FileNotFoundException: src\test\resource\data\TestResults.xlsx (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+	at utils.ExcelReportUtil.updateStatus(ExcelReportUtil.java:136)
+	at hooks.Hooks.updateExcelReport(Hooks.java:99)
+	at hooks.Hooks.tearDown(Hooks.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.executeTests(SuiteTestDescriptor.java:168)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:137)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
-				</li>
-			</ul>
-		</li>
-		<li test-id='95' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Đăng nhập với nhiều bộ dữ liệu khác nhau</div>
-
-				<div class='category-list'>
-						<span class='category label'>@login</span>
-				</div>
-
-			<ul class='gc steps'>
-				<li test-id='97' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given người dùng đang ở trang đăng nhập OranageHRM</h6>
-
-				</li>
-				<li test-id='98' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.nguoi_dung_dang_nhap_voi_tai_khoan(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When người dùng đăng nhập với tài khoản "Admin1" và mật khẩu "admin1234"</h6>
-
-				</li>
-				<li test-id='99' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then kết quả đăng nhập phải là "fail"</h6>
-
-				</li>
-			</ul>
 		</li>
 	</ul>
 </div>
@@ -736,16 +399,15 @@ Session ID: df81449477e4e352c3a0edc9af6d3b80
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@dashboard</span>
+						<span class='category-name'>@login_success</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
-						<span class='label fail'>3</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -759,39 +421,75 @@ Session ID: df81449477e4e352c3a0edc9af6d3b80
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 14, 2026 04:30:26 PM</td>
-										<td class='linked' test-id='2'>Kiểm tra các widget hiển thị đầy đủ trên Dashboard</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:30:44 PM</td>
-										<td class='linked' test-id='15'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:30:56 PM</td>
-										<td class='linked' test-id='23'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
+										<td>Sep 14, 2026 03:31:15 PM</td>
+										<td class='linked' test-id='2'>Đăng nhập thành công với tài khoản hợp lệ</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SEVERITY=critical</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Aug 14, 2026 04:31:20 PM</td>
-										<td class='linked' test-id='31'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 14, 2026 03:31:15 PM</td>
+										<td class='linked' test-id='2'>Đăng nhập thành công với tài khoản hợp lệ</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@epic_OrangeHRM</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Aug 14, 2026 04:31:45 PM</td>
-										<td class='linked' test-id='39'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
 									</tr>
+								</thead>
+								<tbody>
 									<tr>
-										<td>Aug 14, 2026 04:31:56 PM</td>
-										<td class='linked' test-id='47'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
+										<td>Sep 14, 2026 03:31:15 PM</td>
+										<td class='linked' test-id='2'>Đăng nhập thành công với tài khoản hợp lệ</td>
 										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:32:47 PM</td>
-										<td class='linked' test-id='55'>Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch</td>
-										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -802,14 +500,13 @@ Session ID: df81449477e4e352c3a0edc9af6d3b80
 					<div class='category-heading'>
 						<span class='category-name'>@login</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
-						<span class='label fail'>2</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -823,34 +520,9 @@ Session ID: df81449477e4e352c3a0edc9af6d3b80
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 14, 2026 04:33:32 PM</td>
-										<td class='linked' test-id='64'>Đăng nhập thành công với tài khoản hợp lệ</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:33:42 PM</td>
-										<td class='linked' test-id='70'>Đăng nhập thất bại với mật khẩu sai</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:33:50 PM</td>
-										<td class='linked' test-id='77'>Đăng nhập với nhiều bộ dữ liệu khác nhau</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:33:59 PM</td>
-										<td class='linked' test-id='83'>Đăng nhập với nhiều bộ dữ liệu khác nhau</td>
+										<td>Sep 14, 2026 03:31:15 PM</td>
+										<td class='linked' test-id='2'>Đăng nhập thành công với tài khoản hợp lệ</td>
 										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:34:19 PM</td>
-										<td class='linked' test-id='89'>Đăng nhập với nhiều bộ dữ liệu khác nhau</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:35:09 PM</td>
-										<td class='linked' test-id='95'>Đăng nhập với nhiều bộ dữ liệu khác nhau</td>
-										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -887,95 +559,6 @@ Session ID: df81449477e4e352c3a0edc9af6d3b80
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
 						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>4</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 14, 2026 04:31:08 PM</td>
-										<td class='linked' test-id='29'>Then Hệ thống chuyển hướng sang trang "Leave List"</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Leave List'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60006}, goog:processID: 1836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60006/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ddff50c8ca56812a4a138183521a6e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Leave List"(classpath:features/dashboard.feature:18)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:31:34 PM</td>
-										<td class='linked' test-id='37'>Then Hệ thống chuyển hướng sang trang "Timesheets"</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Leave List'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60006}, goog:processID: 1836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60006/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ddff50c8ca56812a4a138183521a6e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Leave List"(classpath:features/dashboard.feature:18)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:31:57 PM</td>
-										<td class='linked' test-id='49'>Given người dùng đang ở trang đăng nhập OranageHRM</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Leave List'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60006}, goog:processID: 1836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60006/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ddff50c8ca56812a4a138183521a6e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Leave List"(classpath:features/dashboard.feature:18)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Aug 14, 2026 04:34:01 PM</td>
-										<td class='linked' test-id='85'>Given người dùng đang ở trang đăng nhập OranageHRM</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[@class='oxd-text oxd-text--h6 orangehrm-main-title' and text()='Leave List'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60006}, goog:processID: 1836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60006/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ddff50c8ca56812a4a138183521a6e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at stepdefinitions.DashboardStep.kiemTraChuyenTrang(DashboardStep.java:60)
-	at ✽.Hệ thống chuyển hướng sang trang "Leave List"(classpath:features/dashboard.feature:18)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.opentest4j.AssertionFailedError</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
@@ -990,17 +573,147 @@ Session ID: 5ddff50c8ca56812a4a138183521a6e3
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 14, 2026 04:35:08 PM</td>
-										<td class='linked' test-id='93'>Then kết quả đăng nhập phải là "fail"</td>
+										<td>Sep 14, 2026 03:31:19 PM</td>
+										<td class='linked' test-id='5'>Given người dùng đang ở trang đăng nhập OranageHRM</td>
 										<td>
-											<textarea disabled class="code-block">org.opentest4j.AssertionFailedError: Kết quả không đúnghttps://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index ==> expected: <fail> but was: <success>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
-	at stepdefinitions.LoginStep.ket_qua_dang_nhap_phai_la(LoginStep.java:69)
-	at ✽.kết quả đăng nhập phải là "fail"(classpath:features/login.feature:19)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@name='username'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.83, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\linhn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64976}, goog:processID: 36204, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64976/devtoo..., se:cdpVersion: 152.0.7977.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2eee49064248cb81420492687aa3c0a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.LoginPage.open(LoginPage.java:24)
+	at stepdefinitions.LoginStep.nguoi_dung_dang_o_trang_dang_nhap(LoginStep.java:39)
+	at ✽.người dùng đang ở trang đăng nhập OranageHRM(classpath:features/login.feature:8)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.RuntimeException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 14, 2026 03:33:01 PM</td>
+										<td class='linked' test-id='10'>hooks.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.RuntimeException: java.io.FileNotFoundException: src\test\resource\data\TestResults.xlsx (The system cannot find the path specified)
+	at utils.ExcelReportUtil.updateStatus(ExcelReportUtil.java:141)
+	at hooks.Hooks.updateExcelReport(Hooks.java:99)
+	at hooks.Hooks.tearDown(Hooks.java:60)
+Caused by: java.io.FileNotFoundException: src\test\resource\data\TestResults.xlsx (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+	at utils.ExcelReportUtil.updateStatus(ExcelReportUtil.java:136)
+	at hooks.Hooks.updateExcelReport(Hooks.java:99)
+	at hooks.Hooks.tearDown(Hooks.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.executeTests(SuiteTestDescriptor.java:168)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:137)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </textarea>
 										</td>
 									</tr>
@@ -1026,37 +739,37 @@ Session ID: 5ddff50c8ca56812a4a138183521a6e3
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>13</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>57</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 14, 2026 04:30:25 PM</div>
+					<div class='panel-lead'>Sep 14, 2026 03:31:14 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 14, 2026 04:35:21 PM</div>
+			 		<div class='panel-lead'>Sep 14, 2026 03:33:02 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 04 56.007</div>
+					<div class='panel-lead'>00 01 47.644</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1072,21 +785,39 @@ Session ID: 5ddff50c8ca56812a4a138183521a6e3
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@dashboard</td>
-							<td>4</td>
-							<td>3</td>
+							<td>@login_success</td>
+							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									57.143%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@SEVERITY=critical</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@epic_OrangeHRM</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@login</td>
-							<td>4</td>
-							<td>2</td>
+							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									66.667%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -1100,35 +831,35 @@ Session ID: 5ddff50c8ca56812a4a138183521a6e3
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
+                parentCount: 1,
 				passParent: 0,
-				failParent: 2,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 13,
-				passChild: 8,
-				failChild: 5,
+				childCount: 1,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 57,
-				passGrandChild: 46,
-				failGrandChild: 5,
+				grandChildCount: 4,
+				passGrandChild: 0,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 6,
+				skipGrandChild: 2,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Quản lý giao diện trang chủ (Dashboard)":185.878,"Đăng nhập hệ thống OrangeHRM":108.842
+			        "Đăng nhập hệ thống OrangeHRM":106.922
 			};
 		</script>
 		

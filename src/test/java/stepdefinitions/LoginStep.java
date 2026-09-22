@@ -6,6 +6,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import pages.LoginPage;
+import utils.ConfigReader;
+import utils.DataReader;
+import utils.TestContext;
+
+import java.util.List;
+import java.util.Map;
 
 // ===== FIX: nhận Hooks qua constructor để Cucumber (cucumber-picocontainer) tự inject =====
 // Trước đây constructor nhận thẳng (WebDriver driver, WebDriverWait wait) nhưng không
@@ -33,6 +39,23 @@ public class LoginStep {
         loginPage().open();
     }
 
+    @When("người dùng đăng nhập với tài khoản hợp lệ")
+    public void nguoi_dung_dang_nhap_voi_tai_khoan(){
+//        flow: điền username và password vào các ô input tương ứng và click
+//        vào nút login
+        ConfigReader configReader = new ConfigReader();
+        configReader.loadProperties();
+
+        String username = configReader.get("adminUsername");
+        String password = configReader.get("adminPassword");
+
+        LoginPage loginPage = loginPage();
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
+        loginPage.clickLoginButton();
+    }
+
+
     @When("người dùng đăng nhập với tài khoản {string} và mật khẩu {string}")
     public void nguoi_dung_dang_nhap_voi_tai_khoan(String username, String password) {
 //        flow: điền username và password vào các ô input tương ứng và click
@@ -43,10 +66,46 @@ public class LoginStep {
         loginPage.clickLoginButton();
     }
 
+    @When("người dùng đăng nhập lần lượt với dữ liệu từ file csv")
+    public void nguoi_dung_dang_nhap_voi_bo_du_lieu(){
+        String csvFilePath = "data/loginData.csv";
+        DataReader dataReader = new DataReader();
+        List<Map<String, String>> rows = dataReader.readCsv(csvFilePath);
+        System.out.println((rows));
+
+        int count = 1;
+        for(Map<String, String> row: rows){
+            System.out.println(count);
+            System.out.println(row);
+            String username = row.get("username");
+            String password = row.get("password");
+            String expected = row.get("expected");
+
+            LoginPage loginPage = loginPage();
+            loginPage.open();
+            loginPage.enterUsername(username);
+            loginPage.enterPassword(password);
+            loginPage.clickLoginButton();
+
+            String currentUrl = hooks.getDriver().getCurrentUrl();
+            String actual = currentUrl.contains("dashboard") ? "success" : "fail";
+            Assertions.assertEquals(expected, actual, "kết quả đăng nhập không khớp từ dữ liệu file cho username: " +  username);
+
+            if(actual.equals("success")){
+                loginPage.logout();
+            }
+        }
+    }
+
     @Then("người dùng được chuyển đến trang Dashboard")
     public void nguoi_dung_da_chuyen_den_trang_dashboard() {
         String currentUrl = hooks.getDriver().getCurrentUrl();
-        Assertions.assertTrue(currentUrl.contains("dashboard"), "Phải chuyển đến trang Dashboard");
+//        Assertions.assertTrue(currentUrl.contains("dashboard"), "Phải chuyển đến trang Dashboard");
+        if(!currentUrl.contains("dashboard")){
+            String note = "Mong đợi: đăng nhập thành công, chuyển đến trang Dashboard" +  " | Thực tế: vẫn ở trang " + currentUrl;
+            TestContext.setNote(note);
+            throw new AssertionError(note); // ném lỗi để cucumber đánh dấu  step/scenario FAILED
+        }
     }
 
     @Then("hệ thống báo lỗi và vẫn ở trang đăng nhập")

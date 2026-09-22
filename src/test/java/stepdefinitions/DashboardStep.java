@@ -37,10 +37,11 @@ public class DashboardStep {
     @And("Hệ thống hiển thị biểu đồ tròn {string}")
     public void kiemTraBieuDoTron(String tenBieuDo){
         By chartTitle = By.xpath("//p[text()='"+ tenBieuDo + "']");
-        boolean isDisplayed = driver.findElement(chartTitle).isDisplayed();
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        WebElement elemet = wait.until(ExpectedConditions.visibilityOfElementLocated(chartTitle));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(chartTitle));
+
+        boolean isDisplayed = element.isDisplayed();
 
         Assertions.assertTrue(isDisplayed,"không tìm thấy biểu đồ: " + tenBieuDo);
     }

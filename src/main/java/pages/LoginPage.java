@@ -12,6 +12,8 @@ public class LoginPage extends BasePage{
 //    cách 2: By.name("username")
     private static final By PASSWORD_INPUT = By.xpath("//input[@name='password']");
     private static final By LOGIN_BUTTON = By.xpath("//button[@type='submit']");
+    private static final By USER_DROPDOWN = By.xpath("//span[@class='oxd-userdropdown-tab']");
+    private static final By LOGOUT_LINK = By.xpath("//a[text()='Logout']");
 
     public LoginPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
@@ -35,6 +37,16 @@ public class LoginPage extends BasePage{
     public void clickLoginButton() {
         WebElement loginButton = driver.findElement(LOGIN_BUTTON);
         loginButton.click();
+    }
+
+    public void logout(){
+        WebElement userDropdown = wait.until(ExpectedConditions.elementToBeClickable(USER_DROPDOWN));
+        userDropdown.click();
+
+        WebElement logoutLink = wait.until(ExpectedConditions.elementToBeClickable(LOGOUT_LINK));
+        logoutLink.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(USERNAME_INPUT));
     }
 
 }

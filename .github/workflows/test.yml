@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Tạo môi trường server
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false # 1 browser fail sẽ ko hủy job của browser khác để thấy kết quả các browser

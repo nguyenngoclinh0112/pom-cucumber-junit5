@@ -172,11 +172,11 @@ public class Hooks {
 
     // ===== FIX: thêm getter để LoginStep lấy driver/wait qua DI thay vì tự truyền null =====
     public WebDriver getDriver() {
-        return driver;
+        return driverThreadLocal.get();
     }
 
     public WebDriverWait getWait() {
-        return wait;
+        return waitThreadLocal.get();
     }
     // ===== END FIX =====
 }

@@ -100,7 +100,7 @@ public class Hooks {
 
 
     @Before
-    public void setUp() {
+    public void setUp() throws IllegalAccessException {
         System.out.println("Before");
         WebDriverManager.chromedriver().setup();
 //        ChromeOptions options = new ChromeOptions();

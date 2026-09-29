@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Tạo môi trường server
-    runs-on: ubuntu-lastes
+    runs-on: ubuntu-lastest
 
     strategy:
       fail-fast: false # 1 browser fail sẽ ko hủy job của browser khác để thấy kết quả các browser
@@ -31,3 +31,5 @@ jobs:
           cache: 'maven'
       - name: Run tests
         run: mvn test
+        env:
+          BROWSER: ${{matrix.browser}}

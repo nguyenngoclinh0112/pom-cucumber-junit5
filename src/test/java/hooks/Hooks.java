@@ -9,18 +9,24 @@ import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.ExcelReportUtil;
 import utils.TestContext;
 
 import java.net.URI;
 import java.time.Duration;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 
 public class Hooks {
 //    setup môi trường để chạy test: tạo driver, tearDown
-    private WebDriver driver;
-    private WebDriverWait wait; // FIX: thêm wait, trước đây bị comment bỏ nên LoginPage nhận null
+//    private WebDriver driver;
+//    private WebDriverWait wait; // FIX: thêm wait, trước đây bị comment bỏ nên LoginPage nhận null
+    private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriverWait> waitThreadLocal = new ThreadLocal<>();
 
 //    allure-cucumber7-jvm tự lấy "Feature" làm nhãn report
     private static final String EPIC_TAG_PREFIX = "@epic_";
@@ -44,15 +50,73 @@ public class Hooks {
                 .ifPresent(tag-> Allure.epic(tag.substring(EPIC_TAG_PREFIX.length())));
     }
 
+    private WebDriver createChromeDriver(boolean isCI){
+        WebDriverManager.chromedriver().setup();;
+        ChromeOptions options = new ChromeOptions();
+
+        options.addArguments("--disable-blink-feature=AutomationControlled");
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        options.setExperimentalOption("useAutomationExtension",false);
+
+        if(isCI){
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        } else {
+            options.addArguments("--start-maximized");
+        }
+
+        return new ChromeDriver(options);
+    }
+
+    private WebDriver createFirefoxDriver(boolean isCI){
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions options = new FirefoxOptions();
+
+        if(isCI){
+            options.addArguments("--headless");
+            options.addArguments("--width=1920","--height=1080");
+        }
+        FirefoxDriver driver = new FirefoxDriver(options);
+
+        if(!isCI){
+            driver.manage().window().maximize();
+        }
+        return driver;
+    }
+
+//    factory method
+    private WebDriver createDriver(String browser, boolean isCI) throws IllegalAccessException {
+        switch(browser){
+            case "chrome":
+                return createChromeDriver(isCI);
+            case "firefox":
+                return createFirefoxDriver(isCI);
+            default:
+                throw new IllegalAccessException("Unsupported browser: " + browser);
+        }
+    }
+
+
     @Before
     public void setUp() {
         System.out.println("Before");
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--start-maximized");
+//        driver = new ChromeDriver(options);
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // FIX: khởi tạo wait cùng lúc với driver
 
-        driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // FIX: khởi tạo wait cùng lúc với driver
+//        GITHUB ACTION tự setup biến môi trường CI=true
+//        chạy trên CI => không có màn hình chrome
+        boolean isCI = Boolean.parseBoolean(System.getenv("CI"));
+
+        WebDriver driver = createDriver("chrome",isCI);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));// FIX: khởi tạo wait cùng lúc với driver
+
+        driverThreadLocal.set(driver);
+        waitThreadLocal.set(wait);
     }
 
     @After
@@ -60,9 +124,13 @@ public class Hooks {
 //        cập nhật kết quả scenario vừa chạy xong vào file TestResult.xlsx
         updateExcelReport(scenario);
 
+        WebDriver driver = driverThreadLocal.get();
+
         if(driver != null) {
             driver.quit();
         }
+        driverThreadLocal.remove();
+        waitThreadLocal.remove();
     }
 
 //    trích tên file .feature (bỏ phần path và đuôi .feature) từ URI của scenario

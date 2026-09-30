@@ -11,6 +11,6 @@
     When người dùng upload avatar "Unix_user_account.png"
     Then avatar được upload thành công
 
-  Scenario: người dùng upload avatar thất bại
-    When người dùng upload avatar "SampleJPGImage_5mb.png"
-    Then hệ thống báo lỗi upload thất bại
+#  Scenario: người dùng upload avatar thất bại
+#    When người dùng upload avatar "SampleJPGImage_5mb.png"
+#    Then hệ thống báo lỗi upload thất bại

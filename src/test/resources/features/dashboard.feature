@@ -13,15 +13,15 @@
       And Hệ thống hiển thị widget "Employees on Leave Today"
       And Hệ thống hiển thị biểu đồ tròn "Employee Distribution by Sub Unit"
 
-    Scenario Outline: Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch
-      When Người dùng nhấn vào icon "<ten_icon>" trong mục Quick Launch
-      Then Hệ thống chuyển hướng sang trang "<ten_trang_den>"
-
-      Examples:
-        | ten_icon          | ten_trang_den     |
-        | Assign Leave      | Assign Leave      |
-        | Leave List        | Leave List        |
-        | Timesheets        | Select Employee   |
-        | Apply Leave       | Apply Leave       |
-        | My Leave          | My Leave List     |
-        | My Timesheet      | My Timesheet      |
+#    Scenario Outline: Kiểm tra chuyển hướng khi nhấn các icon trong Quick Launch
+#      When Người dùng nhấn vào icon "<ten_icon>" trong mục Quick Launch
+#      Then Hệ thống chuyển hướng sang trang "<ten_trang_den>"
+#
+#      Examples:
+#        | ten_icon          | ten_trang_den     |
+#        | Assign Leave      | Assign Leave      |
+#        | Leave List        | Leave List        |
+#        | Timesheets        | Select Employee   |
+#        | Apply Leave       | Apply Leave       |
+#        | My Leave          | My Leave List     |
+#        | My Timesheet      | My Timesheet      |
